@@ -1,5 +1,7 @@
 /*
     Block Strm.Yandex.Ru (ad domain)
+    (c) 2020, anchovy — No Limits for YaMusic
+    //github.com/Anchovys/yandexmusic-adblocker
 */
 if(chrome.webRequest.onBeforeRequest.hasListener(function () { return {cancel: true} })) 
     chrome.webRequest.onBeforeRequest.removeListener( function () { return {cancel: true} });

@@ -1,5 +1,7 @@
 /*
     Custom scripts for Music.Yandex.Ru
+    (c) 2020, anchovy — No Limits for YaMusic
+    //github.com/Anchovys/yandexmusic-adblocker
 */
 
 var elem = document.createElement('div');

@@ -1,12 +1,12 @@
 {
     "manifest_version": 2,
- 
-    "name": "No Limits for YaMusic",
-    "description": "Remove all Audio Ads, Limits, Banners in Yandex.Music. (special for Julia)",
-    "version": "0.03",
+    "name":         "No Limits for YaMusic",
+    "short_name":   "YaMusic Ad Blocker",
+    "description":  "Block all Audio Ads, Limits, Banners in Yandex.Music. (special for Julia)",
+    "version":      "0.04",
     "browser_action":
     {
-        "default_icon": "./assets/img/icon.png",
+        "default_icon":  "./assets/img/icon.png",
         "default_popup": "./assets/frontend/popup.html"
     },
     "icons":
@@ -19,7 +19,6 @@
         "activeTab",
         "webRequestBlocking",
         "webRequest",
-        "tabs",
         "*://strm.yandex.ru/*",
         "*://music.yandex.ru/*"
     ],
@@ -27,10 +26,10 @@
         "scripts":  ["./assets/js/background.js"]
     },
     "content_scripts": [{
-        "css": ["./foryandex/content.css"],
-        "js": ["./foryandex/content.js"],
-        "matches": ["*://music.yandex.ru/*"],
-        "run_at": "document_end"
+        "css":      ["./foryandex/content.css"],
+        "js":       ["./foryandex/content.js"],
+        "matches":  ["*://music.yandex.ru/*"],
+        "run_at":    "document_end"
       }]
     
 }

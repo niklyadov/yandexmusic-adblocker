@@ -1,3 +1,8 @@
+/*
+    Popup CSS Styles
+    (c) 2020, anchovy — No Limits for YaMusic
+    //github.com/Anchovys/yandexmusic-adblocker
+*/
 @font-face
 {
     font-family: 'OpenSans';
@@ -19,11 +24,11 @@ body
     padding: 0px;
 }
 
-div.block
+div.popup-block
 {
     width: 300px;
     height: 250px;
-    padding: 15px;
+    padding: 7px 15px;
     box-shadow: inset 1px 1px 3px #2c51da, inset -1px -1px 2px #101733;
     background: url(../img/8-march.png), linear-gradient(to top left, #324898, #1b124e);
     background-position-y: bottom;

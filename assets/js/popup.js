@@ -1,5 +1,7 @@
 /*
     PoUp dispatcher
+    (c) 2020, anchovy — No Limits for YaMusic
+    //github.com/Anchovys/yandexmusic-adblocker
 */
 document.addEventListener('DOMContentLoaded', function()
 {

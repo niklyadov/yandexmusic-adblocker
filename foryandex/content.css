@@ -1,5 +1,7 @@
 /*
     Custom CSS Styles for Music.Yandex.Ru
+    (c) 2020, anchovy — No Limits for YaMusic
+    //github.com/Anchovys/yandexmusic-adblocker
 */
 .subscription-hint, 
 .bar-below__subscription, 
@@ -25,8 +27,13 @@
     line-height: 50px;
     margin: 10px 0px 0px 10px;
     z-index: 100;
-    background: #000;
+    background: linear-gradient(to top left, #324898, #1b124e);
+    opacity: 0.3;
+    cursor: pointer;
     height: 50px;
     top: 0;
     bottom: 0;
+}
+.anc__ya-m_ad-blocker_loaded:hover {
+    opacity: 1 !important;
 }
