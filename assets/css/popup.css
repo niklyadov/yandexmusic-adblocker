@@ -1,0 +1,33 @@
+@font-face
+{
+    font-family: 'OpenSans';
+    src: url('../fonts/OpenSans-Light.ttf');
+}
+
+hr
+{
+    display: block;
+    box-shadow: 1px 1px 1px #00000061, 
+                1px 2px 1px #ffffff1c;
+    height: 2px;
+    border:none;
+}
+
+body
+{
+    margin: 0px;
+    padding: 0px;
+}
+
+div.block
+{
+    width: 300px;
+    height: 250px;
+    padding: 15px;
+    box-shadow: inset 1px 1px 3px #2c51da, inset -1px -1px 2px #101733;
+    background: url(../img/8-march.png), linear-gradient(to top left, #324898, #1b124e);
+    background-position-y: bottom;
+    color: #ffffff;
+    font-family: 'OpenSans';
+    font-size: 13px;
+}
