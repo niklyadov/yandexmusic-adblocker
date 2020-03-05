@@ -17,7 +17,7 @@
     margin-right: 0px           !important;
 }
 
-.anc__ya-m_ad-blocker_loaded
+#anc__ya-m_ad-blocker_loaded
 {
     color: #fff;
     font-family: segoe ui;
@@ -34,6 +34,6 @@
     top: 0;
     bottom: 0;
 }
-.anc__ya-m_ad-blocker_loaded:hover {
-    opacity: 1 !important;
+#anc__ya-m_ad-blocker_loaded:hover {
+    opacity: 1                  !important;
 }

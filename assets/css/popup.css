@@ -52,3 +52,30 @@ ul
 {
     list-style-type: "⭐️  "; 
 }
+
+div#copyright
+{
+    cursor: pointer;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding: 15px;
+    color: #717ee6;
+}
+
+div#copyright a
+{
+    text-decoration: none;
+    color: inherit;
+    border-bottom: 3px solid transparent;
+    transition: 1s;
+    text-shadow: 1px 1px 1px darkblue;
+}
+
+div#copyright a:hover
+{
+    color: palevioletred;
+    border-bottom: 4px solid rebeccapurple;
+    text-shadow: 2px 2px 10px #ccc;
+    transition: 2s;
+}
