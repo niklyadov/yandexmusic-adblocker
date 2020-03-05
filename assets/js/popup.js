@@ -1,22 +1,32 @@
 /*
-    PoUp dispatcher
+    PopUp dispatcher
     (c) 2020, anchovy — No Limits for YaMusic
     //github.com/Anchovys/yandexmusic-adblocker
 */
+var background = chrome.extension.getBackgroundPage();
+
+function onError(error) 
+{
+    console.error(`Error: ${error}`);
+}
+
 document.addEventListener('DOMContentLoaded', function()
 {
     chrome.tabs.getSelected(null, function(tab)
     {
-        var tablink  = tab.url.replace('https://','').split(/[/?#]/)[0];
-        var status = document.getElementById('status');
+        var statusBar = document.getElementById('status-bar');
+        var statusImg = document.getElementById('status-img');
 
-        if (tablink != 'www.music.yandex.ru' && tablink != 'music.yandex.ru')
+        if (background.correctUrlRegex.test(tab.url)) // check is url correct
         {
-            status.innerHTML = 'Don`t works. (This extension works on domain music.yandex.ru only!)';
+            statusBar.style.borderColor = '#6cd66c';
+            statusBar.innerHTML = 'Works pretty.</b><br>But, if you have a problems, reload the page!';
+            statusImg.src = '../img/facegreen.png';
         } else
         {
-            status.innerHTML = 'Works right now! (If you not see, please, reload page!)';
+            statusBar.style.borderColor = 'darkred';
+            statusBar.innerHTML = '<b>Not works...</b><br>Please, switch tab with opened Ya.Music!';
+            statusImg.src = '../img/facered.png';
         }
-        
     });
 }, false);

@@ -9,12 +9,9 @@
     src: url('../fonts/OpenSans-Light.ttf');
 }
 
-hr
+h1#main-title
 {
-    display: block;
-    box-shadow: 1px 1px 1px #00000061, 
-                1px 2px 1px #ffffff1c;
-    height: 2px;
+    margin: 10px 0px;
     border:none;
 }
 
@@ -24,7 +21,13 @@ body
     padding: 0px;
 }
 
-div.popup-block
+#status-img
+{
+    width: 18px;
+    height: 18px;
+}
+
+div#popup-block
 {
     width: 300px;
     height: 250px;
@@ -35,4 +38,17 @@ div.popup-block
     color: #ffffff;
     font-family: 'OpenSans';
     font-size: 13px;
+}
+
+div#status-bar
+{
+    border-left: 5px solid #151313;
+    padding: 3px 5px;
+    font-size: 14px;
+    background: linear-gradient(to right, transparent, #ffffff21, transparent);
+}
+
+ul
+{
+    list-style-type: "⭐️  "; 
 }
