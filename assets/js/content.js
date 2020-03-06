@@ -4,12 +4,14 @@
     //github.com/Anchovys/yandexmusic-adblocker
 */
 
-window.addEventListener("load",  init, false);
-window.addEventListener("click", onWindowClick );
-
 var data = null; 
 var lastInteract = Date.now();
 var isPlaying = false;
+
+window.addEventListener("load",  init, false);
+window.addEventListener("click", onWindowClick );
+
+//TODO: INFO --> POPUP
 
 function init() 
 {
@@ -26,27 +28,13 @@ function init()
         console.log("[yandex ad blocker] Success inited extension!");
         
         placeElement();
-        sendMsgPopup();
-        
+
         atrTracking(document.getElementsByTagName("body")[0]);
 
     }
 }
 
-/*
-function sendMsgPopup () 
-{
-    chrome.runtime.sendMessage(
-    {
-        data: "Loaded"
-    }, function (response)
-    {
-        console.dir(response);
-    });
-}
-*/
-
-function onWindowClick(event)
+function onWindowClick()
 {
     lastInteract = Date.now();
 }
@@ -67,10 +55,7 @@ function atrTracking(element)
                 // > 10 minutes no interact
                 if(diffInteractTime > 10 && data.playing == false && isPlaying)
                 {
-                    setTimeout(function () {
-                        document.getElementsByClassName("button-play")[0].click();
-                        lastInteract = Date.now();
-                    }, 200);
+                    setTimeout(clickAction, 200);
                 }
 
                 isPlaying = data.playing;
@@ -82,6 +67,12 @@ function atrTracking(element)
     {
         attributes: true
     });
+}
+
+function clickAction() 
+{
+    document.getElementsByClassName("button-play")[0].click();
+    lastInteract = Date.now();
 }
 
 function placeElement()
