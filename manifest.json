@@ -3,7 +3,7 @@
     "name":         "No Limits for YaMusic",
     "short_name":   "YaMusic Ad Blocker",
     "description":  "Block all Audio Ads, Limits, Banners in Yandex.Music. (special for Julia)",
-    "version":      "0.05",
+    "version":      "0.06",
     "browser_action":
     {
        "default_icon":  "./assets/img/icon.png",
