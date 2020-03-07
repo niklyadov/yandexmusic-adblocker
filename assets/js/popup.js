@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', function()
     {
         var statusBar = document.getElementById('status-bar');
         var statusImg = document.getElementById('status-img');
-
+        
         if (background.correctUrlRegex.test(tab.url)) // check is url correct
         {
             /*if(loaded)

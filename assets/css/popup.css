@@ -74,8 +74,18 @@ div#copyright a
 
 div#copyright a:hover
 {
-    color: palevioletred;
-    border-bottom: 4px solid rebeccapurple;
     text-shadow: 2px 2px 10px #ccc;
     transition: 2s;
+}
+
+div#copyright a#julia-link:hover
+{
+    color: palevioletred;
+    border-bottom: 4px solid rebeccapurple;
+}
+
+div#copyright a#anchovy-link:hover
+{
+    color: whitesmoke;
+    border-bottom: 4px solid darkblue;
 }

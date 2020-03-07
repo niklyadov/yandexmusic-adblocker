@@ -30,7 +30,6 @@ function init()
         placeElement();
 
         atrTracking(document.getElementsByTagName("body")[0]);
-
     }
 }
 
@@ -71,7 +70,19 @@ function atrTracking(element)
 
 function clickAction() 
 {
-    document.getElementsByClassName("button-play")[0].click();
+    setTimeout(function() 
+    {
+        if(document.getElementsByClassName("crackdown-popup").length > 0)
+        {
+            document.getElementsByClassName("crackdown-popup__close")[0].click();
+        }
+    }, 200);
+    
+    setTimeout(function() 
+    {
+        document.getElementsByClassName("player-controls__btn_play")[0].click();
+    }, 200);
+    
     lastInteract = Date.now();
 }
 
