@@ -15,18 +15,9 @@ document.addEventListener('DOMContentLoaded', function()
         
         if (background.correctUrlRegex.test(tab.url)) // check is url correct
         {
-            /*if(loaded)
-            {*/
-                statusBar.style.borderColor = '#6cd66c';
-                statusBar.innerHTML = 'Works pretty.</b><br>But, if you have a problems, reload the page!';
-                statusImg.src = '../img/facegreen.png';
-            /*} else 
-            {
-                statusBar.style.borderColor = '#6cd66c';
-                statusBar.innerHTML = 'Some problems.</b><br>Have a some problems with page!';
-                statusImg.src = '../img/faceyellow.png';
-            }*/
-
+            statusBar.style.borderColor = '#6cd66c';
+            statusBar.innerHTML = 'Works pretty.</b><br>But, if you have a problems, reload the page!';
+            statusImg.src = '../img/facegreen.png';
         } else
         {
             statusBar.style.borderColor = 'darkred';
@@ -35,12 +26,3 @@ document.addEventListener('DOMContentLoaded', function()
         }
     });
 }, false);
-
-/*
-
-function onError(error) 
-{
-    console.error(`Error: ${error}`);
-}
-
-*/

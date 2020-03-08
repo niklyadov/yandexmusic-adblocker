@@ -11,8 +11,6 @@ var isPlaying = false;
 window.addEventListener("load",  init, false);
 window.addEventListener("click", onWindowClick );
 
-//TODO: INFO --> POPUP
-
 function init() 
 {
     data = getData(); // getting data about player
@@ -92,6 +90,11 @@ function placeElement()
         elem.id = "anc__ya-m_ad-blocker_loaded";
         elem.innerHTML = "YaMusic AD-blocker loaded!";
     document.body.appendChild(elem);
+
+    elem.onclick = function()
+    {
+        elem.style.display = "none";
+    }
 }
 
 function getData() 
