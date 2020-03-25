@@ -49,8 +49,8 @@ function atrTracking(element)
 
                 console.log("[yandex ad blocker] MUTATE -- obj:" + JSON.stringify(data) + " -- t:" + diffInteractTime);
 
-                // > 10 minutes no interact
-                if(diffInteractTime > 10 && data.playing == false && isPlaying)
+                // > 1 minute no interact
+                if(diffInteractTime > 1 && data.playing == false && isPlaying && checkCrackdown())
                 {
                     setTimeout(clickAction, 200);
                 }
@@ -66,11 +66,16 @@ function atrTracking(element)
     });
 }
 
+function checkCrackdown()
+{
+    return document.getElementsByClassName("crackdown-popup").length > 0;
+}
+
 function clickAction() 
 {
     setTimeout(function() 
     {
-        if(document.getElementsByClassName("crackdown-popup").length > 0)
+        if(checkCrackdown())
         {
             document.getElementsByClassName("crackdown-popup__close")[0].click();
         }

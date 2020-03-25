@@ -21,6 +21,17 @@ body
     padding: 0px;
 }
 
+a
+{
+    color: #fff;
+    text-decoration: none;
+}
+
+a:hover
+{
+    text-decoration: underline;
+}
+
 #status-img
 {
     width: 18px;

@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', function()
         } else
         {
             statusBar.style.borderColor = 'darkred';
-            statusBar.innerHTML = '<b>Not works...</b><br>Please, switch tab with opened Ya.Music!';
+            statusBar.innerHTML = '<b>Not works...</b><br>Please, switch tab with opened <a href=\'https://music.yandex.ru\' target = \'_blank\'>Ya.Music</a>!';
             statusImg.src = '../img/facered.png';
         }
     });
