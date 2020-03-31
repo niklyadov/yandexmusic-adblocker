@@ -50,7 +50,7 @@ function atrTracking(element)
                 console.log("[yandex ad blocker] MUTATE -- obj:" + JSON.stringify(data) + " -- t:" + diffInteractTime);
 
                 // > 1 minute no interact
-                if(diffInteractTime > 1 && data.playing == false && isPlaying && checkCrackdown())
+                if(data.playing == false && isPlaying && checkCrackdown())
                 {
                     setTimeout(clickAction, 200);
                 }
@@ -73,20 +73,20 @@ function checkCrackdown()
 
 function clickAction() 
 {
-    setTimeout(function() 
-    {
-        if(checkCrackdown())
+    if(checkCrackdown()) {
+        setTimeout(function() 
         {
             document.getElementsByClassName("crackdown-popup__close")[0].click();
-        }
-    }, 200);
-    
-    setTimeout(function() 
-    {
-        document.getElementsByClassName("player-controls__btn_play")[0].click();
-    }, 200);
-    
-    lastInteract = Date.now();
+        }, 200);
+        
+        setTimeout(function() 
+        {
+            document.getElementsByClassName("player-controls__btn_play")[0].click();
+        }, 200);
+        
+        lastInteract = Date.now();
+    }
+
 }
 
 function placeElement()

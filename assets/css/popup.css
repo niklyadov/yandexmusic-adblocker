@@ -44,7 +44,7 @@ div#popup-block
     height: 250px;
     padding: 7px 15px;
     box-shadow: inset 1px 1px 3px #2c51da, inset -1px -1px 2px #101733;
-    background: url(../img/8-march.png), linear-gradient(to top left, #324898, #1b124e);
+    background: /*url(../img/8-march.png),*/linear-gradient(to top left, #324898, #1b124e);
     background-position-y: bottom;
     color: #ffffff;
     font-family: 'OpenSans';
@@ -85,7 +85,7 @@ div#copyright a
 
 div#copyright a:hover
 {
-    text-shadow: 2px 2px 10px #ccc;
+    text-shadow: 2px 2px 10px #af6b8c;
     transition: 2s;
 }
 
