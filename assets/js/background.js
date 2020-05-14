@@ -1,12 +1,39 @@
 /*
     Block Strm.Yandex.Ru (ad domain)
+    Block Yandex Direct
     (c) 2020, anchovy — No Limits for YaMusic
     //github.com/Anchovys/yandexmusic-adblocker
 */
 var correctUrlRegex = /^https?:\/\/(?:[^./?#]+\.)?music.yandex\.ru/;
 
-if(chrome.webRequest.onBeforeRequest.hasListener(function () { return {cancel: true} })) 
-{
-    chrome.webRequest.onBeforeRequest.removeListener( function () { return {cancel: true} });
-}
-chrome.webRequest.onBeforeRequest.addListener( function () { return {cancel: true}  }, {urls: ['*://strm.yandex.ru/*']}, ['blocking']);
+const filter = {
+    urls: [
+        "*://awaps.yandex.net/*",
+        "*://awaps.yandex.ru/*",
+        "*://an.yandex.ru/*",
+        "*://googleadservices.com/*",
+        "*://*.googleadservices.com/*",
+        "*://strm.yandex.ru/*",
+        "*://*.strm.yandex.ru/*",
+        "*://banners.adfox.ru/*",
+        "*://content.adfox.ru/*",
+        "*://ads.adfox.ru/*",
+        "*://jstracer.yandex.ru/*",
+    ],
+  }
+  
+const webRequestFlags = [
+    'blocking',
+];
+
+window.chrome.webRequest.onBeforeRequest.addListener(
+    page => {
+      console.log('page blocked - ' + page.url);
+  
+      return {
+        cancel: true,
+      };
+    },
+    filter,
+    webRequestFlags,
+);

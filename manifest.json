@@ -1,9 +1,9 @@
 {
     "manifest_version": 2,
-    "name":         "Yandex Music Ad Blocker!",
-    "short_name":   "YaMusic Ad Blocker",
+    "name":         "Yandex Music AdBlock!",
+    "short_name":   "Ya Music AdBlock!",
     "description":  "Block all Audio Ads, Limits, Banners in Yandex.Music. (special for Julia)",
-    "version":      "0.09",
+    "version":      "0.87",
     "browser_action":
     {
        "default_icon":  "./assets/img/icon.png",
@@ -19,8 +19,8 @@
         "activeTab",
         "webRequestBlocking",
         "webRequest",
-        "*://strm.yandex.ru/*",
-        "*://music.yandex.ru/*"
+        "<all_urls>",
+        "tabs"
     ],
     "background" : {
         "scripts":  ["./assets/js/background.js"]
